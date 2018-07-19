@@ -1,0 +1,11 @@
+{% extends 'spider/base.html' %}
+
+{% block content %}
+<h1>Радиостанции по битрейту {{ bitrate }}</h1>
+<ul>
+	{% for item in items %}
+	<li><a href="/{{ item.id }}">{{ item.name }}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

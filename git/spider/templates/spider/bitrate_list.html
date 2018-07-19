@@ -1,0 +1,12 @@
+{% extends 'spider/base.html' %}
+
+{% block content %}
+
+<h1>Битрейты</h1>
+<ul>
+	{% for item in items %}
+	<li><a href="{% url 'bitrate' %}?bitrate={{ item.bitrate }}">{{ item.bitrate }}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

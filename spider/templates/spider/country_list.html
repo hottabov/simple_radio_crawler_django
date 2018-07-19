@@ -1,0 +1,12 @@
+{% extends 'spider/base.html' %}
+
+{% block content %}
+
+<h1>Страны</h1>
+<ul>
+	{% for item in items %}
+	<li><a href="{% url 'country' %}?country={{ item.country }}">{{ item.country }}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

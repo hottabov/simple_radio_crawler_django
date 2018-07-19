@@ -1,0 +1,10 @@
+{% extends 'spider/base.html' %}
+
+{% block content %}
+	{% for post in posts %} 
+	<tr>
+		<td><a href="{% url 'post_detail' pk=post.pk %}">{{ post.name }}</a></td>        
+		<td>{{ post.site }}</td>	
+	</tr>
+	{% endfor %}
+{% endblock %}

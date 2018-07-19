@@ -1,0 +1,12 @@
+{% extends 'spider/base.html' %}
+
+{% block content %}
+
+<h1>Города</h1>
+<ul>
+	{% for item in items %}
+	<li><a href="{% url 'city' %}?city={{ item.city }}">{{ item.city }}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}
